@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/editTextSend"
+        style="@style/EditTextTextPrimary"
+        android:layout_width="230dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="72dp"
+        android:ems="10"
+        android:focusableInTouchMode="true"
+        android:imeOptions="actionDone"
+        android:inputType="numberDecimal"
+        app:backgroundTint="#B8B6D1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/editTextGet"
+        style="@style/EditTextTextPrimary"
+        android:layout_width="230dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="92dp"
+        android:ems="10"
+        android:imeOptions="actionDone"
+        android:inputType="numberDecimal"
+        app:backgroundTint="@color/gently_lilac"
+        app:layout_constraintEnd_toEndOf="@+id/editTextSend"
+        app:layout_constraintHorizontal_bias="0.066"
+        app:layout_constraintStart_toStartOf="@+id/editTextSend"
+        app:layout_constraintTop_toBottomOf="@+id/editTextSend" />
+
+    <TextView
+        android:id="@+id/textViewSend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:text="@string/you_send"
+        android:textColor="@color/gently_lilac"
+        app:layout_constraintBottom_toTopOf="@+id/editTextSend"
+        app:layout_constraintStart_toStartOf="@+id/editTextSend" />
+
+    <TextView
+        android:id="@+id/textViewGet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:text="@string/they_get"
+        android:textColor="@color/gently_lilac"
+        app:layout_constraintBottom_toTopOf="@+id/editTextGet"
+        app:layout_constraintStart_toStartOf="@+id/editTextGet" />
+
+    <ImageView
+        android:id="@+id/imageViewRatesNamesGet"
+        android:layout_width="42dp"
+        android:layout_height="33dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewCurRateGet"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textViewCurRateGet"
+        app:layout_constraintTop_toTopOf="@+id/textViewCurRateGet"
+        app:srcCompat="@drawable/ic_round_expand_more_24"
+        android:contentDescription="@string/chooser" />
+
+    <ImageView
+        android:id="@+id/imageViewRatesNamesSend"
+        android:layout_width="42dp"
+        android:layout_height="33dp"
+        android:layout_marginEnd="4dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewCurRateSend"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textViewCurRateSend"
+        app:layout_constraintTop_toTopOf="@+id/textViewCurRateSend"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/ic_round_expand_more_24"
+        android:contentDescription="@string/chooser" />
+
+    <ImageView
+        android:id="@+id/imageViewArrowUp"
+        android:layout_width="27dp"
+        android:layout_height="32dp"
+        android:layout_marginEnd="16dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/textViewGet"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextSend"
+        app:layout_constraintVertical_bias="0.516"
+        app:srcCompat="@drawable/ic_round_north_24"
+        android:contentDescription="@string/arrow_up" />
+
+    <ImageView
+        android:id="@+id/imageViewArrowDown"
+        android:layout_width="27dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="16dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewArrowUp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageViewArrowUp"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/ic_round_south_24"
+        android:contentDescription="@string/arrow_down" />
+
+
+    <TextView
+        android:id="@+id/textViewCurRateSend"
+        style="@style/TextViewPrimary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_medium"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextSend"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewRatesNamesSend"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@+id/editTextSend"
+        app:layout_constraintTop_toTopOf="@+id/editTextSend"
+        app:layout_constraintVertical_bias="0.538" />
+
+    <TextView
+        android:id="@+id/textViewCurRateGet"
+        style="@style/TextViewPrimary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_medium"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextGet"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewRatesNamesGet"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@+id/editTextGet"
+        app:layout_constraintTop_toTopOf="@+id/editTextGet" />
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/topAppBar"
+            style="@style/Widget.MaterialComponents.Toolbar.Primary"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:navigationIcon="@drawable/ic_baseline_menu_24"
+            app:title="Currency converter" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextGet" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
